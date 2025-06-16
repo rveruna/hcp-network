@@ -1,21 +1,11 @@
-import { useDispatch, useSelector } from 'react-redux'
-import type { RootState } from './store'
-import { setSelectedHCPId } from './features/hcpGraphSlice'
+import GraphCanvas from './components/GraphCanvas'
 
 function App() {
-  const dispatch = useDispatch()
-  const selected = useSelector((state: RootState) => state.hcpGraph.selectedHCPId)
 
   return (
     <div>
-      <h1>Redux Test</h1>
-      <p>Selected HCP ID: {selected ?? 'none'}</p>
-      <button onClick={() => dispatch(setSelectedHCPId('hcp-123'))}>
-        Select HCP
-      </button>
-      <button onClick={() => dispatch(setSelectedHCPId(null))}>
-        Clear
-      </button>
+      <h1>Healthcare Graph</h1>
+      <GraphCanvas />
     </div>
   )
 }
