@@ -1,5 +1,5 @@
 import ForceGraph2D from 'react-force-graph-2d';
-import { mockGraphData } from '../data/mockGraph';
+import { mockGraphData, type HCPLink, type HCPNode } from '../data/mockGraph';
 import { useDispatch } from 'react-redux';
 import { setSelectedHCPId } from '../features/hcpGraphSlice';
 import { useState } from 'react';
@@ -8,6 +8,7 @@ function GraphCanvas() {
   const dispatch = useDispatch();
   const [hoveredLinkLabel, setHoveredLinkLabel] = useState<string | null>(null);
   const [mousePos, setMousePos] = useState<{ x: number; y: number } | null>(null);
+  const [clickedLink, setClickedLink] = useState<HCPLink | null>(null);
 
   return (
     <div
@@ -34,6 +35,9 @@ function GraphCanvas() {
             setHoveredLinkLabel(null);
           }
         }}
+        onLinkClick={(link: HCPLink) => {
+          setClickedLink(link);
+        }}
       />
 
       {hoveredLinkLabel && mousePos && (
@@ -52,6 +56,49 @@ function GraphCanvas() {
           }}
         >
           {hoveredLinkLabel}
+        </div>
+      )}
+
+      {clickedLink && (
+        <div
+          style={{
+            position: 'absolute',
+            bottom: 20,
+            left: 20,
+            background: 'white',
+            color: 'black',
+            padding: '1rem',
+            borderRadius: '8px',
+            maxWidth: '300px',
+            boxShadow: '0 2px 10px rgba(0,0,0,0.2)'
+          }}
+        >
+          <h3 style={{ marginTop: 0 }}>Connection Details</h3>
+          <p>
+            <strong>Label:</strong> {clickedLink.label}
+          </p>
+          <p>
+            <strong>Type:</strong> {clickedLink.type}
+          </p>
+          <p>
+            <strong>From:</strong> {(clickedLink.source as HCPNode)?.name}
+          </p>
+          <p>
+            <strong>To:</strong> {clickedLink.target?.name}
+          </p>
+          <button
+            onClick={() => setClickedLink(null)}
+            style={{
+              marginTop: '1rem',
+              padding: '6px 12px',
+              border: 'none',
+              background: '#eee',
+              cursor: 'pointer',
+              borderRadius: '4px'
+            }}
+          >
+            Close
+          </button>
         </div>
       )}
     </div>
