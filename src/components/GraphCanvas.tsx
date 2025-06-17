@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { setSelectedHCPId } from '../features/hcpGraphSlice';
 import { useRef, useEffect, useState } from 'react';
 import type { RootState } from '../store';
+import { useGraphData } from '../hooks/useGraphData';
 
 function GraphCanvas() {
   const dispatch = useDispatch();
@@ -23,6 +24,9 @@ function GraphCanvas() {
     }
   }, [selectedId]);
 
+  const graphData = useGraphData();
+  if (!graphData) return <p>Loading graph...</p>;
+
   return (
     <div
       style={{ position: 'relative', width: '100%', height: '600px' }}
@@ -32,7 +36,7 @@ function GraphCanvas() {
     >
       <ForceGraph2D
         ref={fgRef}
-        graphData={mockGraphData}
+        graphData={graphData}
         nodeLabel={() => ''}
         linkLabel={() => ''}
         nodeAutoColorBy="specialty"
