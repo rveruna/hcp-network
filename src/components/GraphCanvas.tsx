@@ -1,14 +1,27 @@
 import ForceGraph2D from 'react-force-graph-2d';
 import { mockGraphData, type HCPLink, type HCPNode } from '../data/mockGraph';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { setSelectedHCPId } from '../features/hcpGraphSlice';
-import { useState } from 'react';
+import { useRef, useEffect, useState } from 'react';
+import type { RootState } from '../store';
 
 function GraphCanvas() {
   const dispatch = useDispatch();
   const [hoveredLinkLabel, setHoveredLinkLabel] = useState<string | null>(null);
   const [mousePos, setMousePos] = useState<{ x: number; y: number } | null>(null);
   const [clickedLink, setClickedLink] = useState<HCPLink | null>(null);
+  const fgRef = useRef<any>(null);
+  const selectedId = useSelector((state: RootState) => state.hcpGraph.selectedHCPId);
+
+  useEffect(() => {
+    if (!selectedId || !fgRef.current) return;
+
+    const node = mockGraphData.nodes.find((n) => n.id === selectedId);
+    if (node) {
+      fgRef.current.centerAt(node.x ?? 0, node.y ?? 0, 1000);
+      fgRef.current.zoom(4, 1000);
+    }
+  }, [selectedId]);
 
   return (
     <div
@@ -18,6 +31,7 @@ function GraphCanvas() {
       }}
     >
       <ForceGraph2D
+        ref={fgRef}
         graphData={mockGraphData}
         nodeLabel={() => ''}
         linkLabel={() => ''}
