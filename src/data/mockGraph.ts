@@ -3,6 +3,8 @@ export interface HCPNode {
   name: string;
   avatar: string;
   specialty: string;
+  x?: number;
+  y?: number;
 }
 
 export interface HCPLink {
