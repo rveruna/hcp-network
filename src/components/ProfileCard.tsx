@@ -1,29 +1,34 @@
-import { useSelector } from 'react-redux'
-import type { RootState } from '../store'
-import { mockGraphData } from '../data/mockGraph'
+// src/components/Sidebar.tsx
+import styles from '../App.module.css';
+import type { Node } from '../types';
+import type { parseOrcidRecord } from '../utils/parseOrcidRecord';
 
-function ProfileCard() {
-  const selectedId = useSelector((state: RootState) => state.hcpGraph.selectedHCPId)
-  const hcp = mockGraphData.nodes.find((n) => n.id === selectedId)
-
-  if (!hcp) return null
-
-  return (
-    <div style={{
-      background: '#fff',
-      color: '#000',
-      padding: '1rem',
-      borderRadius: '8px',
-      marginTop: '1rem',
-      marginLeft: '1rem',
-      maxWidth: '300px',
-      boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
-
-    }}>
-      <h2 style={{ margin: '0 0 0.5rem 0' }}>{hcp.name}</h2>
-      <p><strong>Specialty:</strong> {hcp.specialty}</p>
-    </div>
-  )
+interface SidebarProps {
+  selectedNode: Node | null;
+  profileData: ReturnType<typeof parseOrcidRecord> | null;
 }
 
-export default ProfileCard
+export function ProfileCard({ selectedNode, profileData }: SidebarProps) {
+  return (
+    <>
+      {profileData ? (
+        <div>
+          <h3>{profileData.name}</h3>
+          {profileData.biography && <p>{profileData.biography}</p>}
+          <h4>Publications</h4>
+          <ul>
+            {profileData.publications.slice(0, 5).map((p, i) => (
+              <li key={i}>{p}</li>
+            ))}
+          </ul>
+        </div>
+      ) : selectedNode ? (
+        <p>Loading profile...</p>
+      ) : (
+        <div className={styles.placeholder}>
+          Select a node in the graph to view profile details.
+        </div>
+      )}
+    </>
+  );
+}

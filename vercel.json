@@ -1,0 +1,3 @@
+{
+  "rewrites": [{ "source": "/api/orcid", "destination": "/api/orcid.js" }]
+}

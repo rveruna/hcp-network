@@ -1,4 +1,12 @@
 import { useEffect, useState } from 'react';
+// import { fetchOrcidName } from '../utils/fetchOrcidName';
+
+const nameCache = new Map<string, string>();
+
+function extractOrcidId(id: string): string | null {
+  const match = id.match(/\d{4}-\d{4}-\d{4}-\d{3}[0-9X]/);
+  return match ? match[0] : null;
+}
 
 export function useGraphData() {
   const [graphData, setGraphData] = useState<{ nodes: any[]; links: any[] } | null>(null);
@@ -6,7 +14,6 @@ export function useGraphData() {
   useEffect(() => {
     async function loadGraphML() {
       const res = await fetch('/data/interesting_candidates_v5.graphml');
-
       const text = await res.text();
 
       const parser = new DOMParser();
@@ -26,7 +33,25 @@ export function useGraphData() {
         };
       });
 
-      const nodeMap = Object.fromEntries(nodes.map((n) => [n.id, n]));
+      const enrichedNodes = await Promise.all(
+        nodes.map(async (node) => {
+          const orcid = extractOrcidId(node.id);
+          if (orcid && node.name === orcid) {
+            if (nameCache.has(orcid)) {
+              node.name = nameCache.get(orcid)!;
+            } else {
+              // const enrichedName = await fetchOrcidName(orcid);
+              // if (enrichedName) {
+              //   nameCache.set(orcid, enrichedName);
+              //   node.name = enrichedName;
+              // }
+            }
+          }
+          return node;
+        })
+      );
+
+      const nodeMap = Object.fromEntries(enrichedNodes.map((n) => [n.id, n]));
 
       const links = edgeElems.map((edgeEl) => {
         const sourceId = edgeEl.getAttribute('source') || '';
@@ -40,7 +65,7 @@ export function useGraphData() {
         };
       });
 
-      setGraphData({ nodes, links });
+      setGraphData({ nodes: enrichedNodes, links });
     }
 
     loadGraphML();

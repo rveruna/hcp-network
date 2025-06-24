@@ -1,21 +1,70 @@
-import GraphCanvas from './components/GraphCanvas';
-import { useSelector } from 'react-redux';
-import type { RootState } from './store';
-import ProfileCard from './components/ProfileCard';
-import SearchBar from './components/SearchBar';
+import { useEffect, useState } from 'react';
+import styles from './App.module.css';
+import { loadGraphML } from './utils/loadGraphML';
+import { buildCoauthorGraph } from './utils/buildCoauthorGraph';
+import { ProfileCard } from './components/ProfileCard';
+import { GraphCanvas } from './components/GraphCanvas';
+import { SearchBar } from './components/SearchBar';
+import { useOrcidProfile } from './hooks/useOrcidProfile';
+import { useOrcidNames } from './hooks/useOrcidNames';
+
+type Node = { id: string; label: string; displayName?: string };
+type Link = { source: string; target: string; label: string };
 
 function App() {
-  const selected = useSelector((state: RootState) => state.hcpGraph.selectedHCPId);
+  const [graphData, setGraphData] = useState<{ nodes: Node[]; links: Link[] } | null>(null);
+  const [selectedNode, setSelectedNode] = useState<Node | null>(null);
+  const [searchQuery] = useState('');
+  const { profileData, fetchProfile, setProfileData } = useOrcidProfile();
+
+  useEffect(() => {
+    loadGraphML('/data/interesting_candidates_v5.graphml').then((raw) => {
+      const graph = buildCoauthorGraph(raw.nodes, raw.links);
+      setGraphData(graph);
+    });
+  }, []);
+
+  useOrcidNames(graphData, setGraphData);
+
+  const handleNodeClick = async (node: Node) => {
+    setSelectedNode(node);
+    setProfileData(null);
+    await fetchProfile(node.id);
+  };
+
+  useEffect(() => {
+    if (!graphData || !searchQuery.trim()) return;
+
+    const lower = searchQuery.toLowerCase();
+    const match = graphData.nodes.find((n) =>
+      (n.displayName || n.id).toLowerCase().includes(lower)
+    );
+
+    if (match) {
+      handleNodeClick(match);
+    }
+  }, [searchQuery, graphData]);
 
   return (
-    <div style={{ display: 'flex' }}>
-      <div style={{ flex: 1 }}>
-        <h1>Healthcare Graph</h1>
-        <SearchBar />
-        <GraphCanvas />
-        <p style={{ padding: '1rem' }}>Selected HCP ID: {selected ?? 'none'}</p>
-      </div>
-      <ProfileCard />
+    <div className={styles.layout}>
+      <aside className={styles.sidebar}>
+        <h2 className={styles.header}>PeerSpace</h2>
+        {graphData && <SearchBar nodes={graphData.nodes} onSelect={handleNodeClick} />}
+
+        <ProfileCard selectedNode={selectedNode} profileData={profileData} />
+      </aside>
+
+      <main className={styles.graphArea}>
+        {graphData ? (
+          <GraphCanvas
+            graphData={graphData}
+            onNodeClick={handleNodeClick}
+            selectedNode={selectedNode}
+          />
+        ) : (
+          'Loading graph...'
+        )}
+      </main>
     </div>
   );
 }
