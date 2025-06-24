@@ -1,0 +1,304 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ns0:graphml xmlns:ns0="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><ns0:key id="labels" for="edge" attr.name="labels" attr.type="string" />
+<ns0:key id="labels" for="node" attr.name="labels" attr.type="string" />
+<ns0:graph edgedefault="directed"><ns0:node id="('Researcher', '0000-0003-0427-0369')">
+  <ns0:data key="labels">Researcher</ns0:data>
+</ns0:node>
+<ns0:node id="('Researcher', '0000-0001-7290-4496')">
+  <ns0:data key="labels">Researcher</ns0:data>
+</ns0:node>
+<ns0:node id="('Researcher', '0000-0002-1290-1100')">
+  <ns0:data key="labels">Researcher</ns0:data>
+</ns0:node>
+<ns0:node id="('Researcher', '0000-0002-8307-144X')">
+  <ns0:data key="labels">Researcher</ns0:data>
+</ns0:node>
+<ns0:node id="('Researcher', '0000-0003-2615-5345')">
+  <ns0:data key="labels">Researcher</ns0:data>
+</ns0:node>
+<ns0:node id="('Researcher', '0000-0002-8592-9753')">
+  <ns0:data key="labels">Researcher</ns0:data>
+</ns0:node>
+<ns0:node id="('Researcher', '0000-0002-3146-4524')">
+  <ns0:data key="labels">Researcher</ns0:data>
+</ns0:node>
+<ns0:node id="('Researcher', '0000-0001-5116-1427')">
+  <ns0:data key="labels">Researcher</ns0:data>
+</ns0:node>
+<ns0:node id="('Researcher', '0000-0003-2124-6272')">
+  <ns0:data key="labels">Researcher</ns0:data>
+</ns0:node>
+<ns0:node id="('Researcher', '0000-0001-8099-3863')">
+  <ns0:data key="labels">Researcher</ns0:data>
+</ns0:node>
+<ns0:node id="('Researcher', '0000-0003-0133-8444')">
+  <ns0:data key="labels">Researcher</ns0:data>
+</ns0:node>
+<ns0:node id="('Researcher', '0000-0003-0968-8721')">
+  <ns0:data key="labels">Researcher</ns0:data>
+</ns0:node>
+<ns0:node id="('Researcher', '0000-0002-1472-2528')">
+  <ns0:data key="labels">Researcher</ns0:data>
+</ns0:node>
+<ns0:node id="('Researcher', '0000-0002-5245-8254')">
+  <ns0:data key="labels">Researcher</ns0:data>
+</ns0:node>
+<ns0:node id="('Researcher', '0000-0002-8350-6407')">
+  <ns0:data key="labels">Researcher</ns0:data>
+</ns0:node>
+<ns0:node id="('Researcher', '0000-0003-0567-2562')">
+  <ns0:data key="labels">Researcher</ns0:data>
+</ns0:node>
+<ns0:node id="('Researcher', '0000-0001-8347-6466')">
+  <ns0:data key="labels">Researcher</ns0:data>
+</ns0:node>
+<ns0:node id="('Researcher', '0000-0002-2402-0466')">
+  <ns0:data key="labels">Researcher</ns0:data>
+</ns0:node>
+<ns0:node id="('Researcher', '0009-0002-6871-9081')">
+  <ns0:data key="labels">Researcher</ns0:data>
+</ns0:node>
+<ns0:node id="('Researcher', '0000-0001-7746-7475')">
+  <ns0:data key="labels">Researcher</ns0:data>
+</ns0:node>
+<ns0:node id="('Researcher', '0000-0003-0740-4182')">
+  <ns0:data key="labels">Researcher</ns0:data>
+</ns0:node>
+<ns0:node id="('Researcher', '0000-0002-2674-9234')">
+  <ns0:data key="labels">Researcher</ns0:data>
+</ns0:node>
+<ns0:node id="('Researcher', '0000-0002-2739-0868')">
+  <ns0:data key="labels">Researcher</ns0:data>
+</ns0:node>
+<ns0:node id="('Researcher', '0000-0001-8824-2183')">
+  <ns0:data key="labels">Researcher</ns0:data>
+</ns0:node>
+<ns0:node id="('Researcher', '0000-0003-2149-3564')">
+  <ns0:data key="labels">Researcher</ns0:data>
+</ns0:node>
+<ns0:node id="('Researcher', '0000-0001-9550-5869')">
+  <ns0:data key="labels">Researcher</ns0:data>
+</ns0:node>
+<ns0:node id="('Researcher', '0000-0003-4016-8492')">
+  <ns0:data key="labels">Researcher</ns0:data>
+</ns0:node>
+<ns0:node id="('Researcher', '0000-0002-0216-3829')">
+  <ns0:data key="labels">Researcher</ns0:data>
+</ns0:node>
+<ns0:node id="('Researcher', '0000-0001-8161-6525')">
+  <ns0:data key="labels">Researcher</ns0:data>
+</ns0:node>
+<ns0:node id="('Researcher', '0000-0001-8389-9522')">
+  <ns0:data key="labels">Researcher</ns0:data>
+</ns0:node>
+<ns0:node id="('Researcher', '0000-0002-8421-4465')">
+  <ns0:data key="labels">Researcher</ns0:data>
+</ns0:node>
+<ns0:node id="('Researcher', '0000-0001-9698-0389')">
+  <ns0:data key="labels">Researcher</ns0:data>
+</ns0:node>
+<ns0:node id="('Researcher', '0000-0002-2418-5156')">
+  <ns0:data key="labels">Researcher</ns0:data>
+</ns0:node>
+<ns0:node id="('Researcher', '0000-0002-2484-7252')">
+  <ns0:data key="labels">Researcher</ns0:data>
+</ns0:node>
+<ns0:node id="('Researcher', '0000-0001-5037-0147')">
+  <ns0:data key="labels">Researcher</ns0:data>
+</ns0:node>
+<ns0:node id="('Researcher', '0000-0003-2546-7427')">
+  <ns0:data key="labels">Researcher</ns0:data>
+</ns0:node>
+<ns0:node id="('Researcher', '0000-0002-7766-744X')">
+  <ns0:data key="labels">Researcher</ns0:data>
+</ns0:node>
+<ns0:node id="('Researcher', '0000-0002-1953-2299')">
+  <ns0:data key="labels">Researcher</ns0:data>
+</ns0:node>
+<ns0:node id="('Researcher', '0000-0002-9117-203X')">
+  <ns0:data key="labels">Researcher</ns0:data>
+</ns0:node>
+<ns0:node id="('Researcher', '0000-0002-0964-3147')">
+  <ns0:data key="labels">Researcher</ns0:data>
+</ns0:node>
+<ns0:node id="('Researcher', '0000-0002-2598-1752')">
+  <ns0:data key="labels">Researcher</ns0:data>
+</ns0:node>
+<ns0:node id="('Researcher', '0000-0002-7077-6096')">
+  <ns0:data key="labels">Researcher</ns0:data>
+</ns0:node>
+<ns0:node id="('Researcher', '0000-0002-5425-1708')">
+  <ns0:data key="labels">Researcher</ns0:data>
+</ns0:node>
+<ns0:node id="('Researcher', '0000-0001-7158-7812')">
+  <ns0:data key="labels">Researcher</ns0:data>
+</ns0:node>
+<ns0:node id="('Researcher', '0009-0001-8905-9425')">
+  <ns0:data key="labels">Researcher</ns0:data>
+</ns0:node>
+<ns0:node id="('Researcher', '0000-0002-0043-324X')">
+  <ns0:data key="labels">Researcher</ns0:data>
+</ns0:node>
+<ns0:node id="('Researcher', '0000-0002-2885-2999')">
+  <ns0:data key="labels">Researcher</ns0:data>
+</ns0:node>
+<ns0:node id="('Researcher', '0000-0002-2594-2649')">
+  <ns0:data key="labels">Researcher</ns0:data>
+</ns0:node>
+<ns0:node id="('Researcher', '0000-0001-6599-0269')">
+  <ns0:data key="labels">Researcher</ns0:data>
+</ns0:node>
+<ns0:node id="('Researcher', '0000-0001-9866-6721')">
+  <ns0:data key="labels">Researcher</ns0:data>
+</ns0:node>
+<ns0:node id="('Researcher', '0000-0001-6166-8766')">
+  <ns0:data key="labels">Researcher</ns0:data>
+</ns0:node>
+<ns0:node id="('Researcher', '0000-0002-0919-381X')">
+  <ns0:data key="labels">Researcher</ns0:data>
+</ns0:node>
+<ns0:node id="('Researcher', '0000-0001-6530-0483')">
+  <ns0:data key="labels">Researcher</ns0:data>
+</ns0:node>
+<ns0:node id="('Researcher', '0000-0002-0127-8667')">
+  <ns0:data key="labels">Researcher</ns0:data>
+</ns0:node>
+<ns0:node id="('Researcher', '0000-0002-8748-4532')">
+  <ns0:data key="labels">Researcher</ns0:data>
+</ns0:node>
+<ns0:node id="('Researcher', '0000-0003-2030-7969')">
+  <ns0:data key="labels">Researcher</ns0:data>
+</ns0:node>
+<ns0:node id="('Researcher', '0000-0002-7061-0096')">
+  <ns0:data key="labels">Researcher</ns0:data>
+</ns0:node>
+<ns0:node id="('Researcher', '0000-0002-1228-1028')">
+  <ns0:data key="labels">Researcher</ns0:data>
+</ns0:node>
+<ns0:node id="('Researcher', '0000-0002-4017-5193')">
+  <ns0:data key="labels">Researcher</ns0:data>
+</ns0:node>
+<ns0:node id="('Researcher', '0000-0002-6492-7273')">
+  <ns0:data key="labels">Researcher</ns0:data>
+</ns0:node>
+<ns0:node id="('Researcher', '0000-0002-8029-746X')">
+  <ns0:data key="labels">Researcher</ns0:data>
+</ns0:node>
+<ns0:node id="('Researcher', '0000-0002-8919-0298')">
+  <ns0:data key="labels">Researcher</ns0:data>
+</ns0:node>
+<ns0:node id="('Researcher', '0000-0002-6315-693X')">
+  <ns0:data key="labels">Researcher</ns0:data>
+</ns0:node>
+<ns0:node id="('Researcher', '0000-0002-5140-158X')">
+  <ns0:data key="labels">Researcher</ns0:data>
+</ns0:node>
+<ns0:node id="('Researcher', '0000-0003-3012-7398')">
+  <ns0:data key="labels">Researcher</ns0:data>
+</ns0:node>
+<ns0:node id="('Researcher', '0000-0001-5300-8151')">
+  <ns0:data key="labels">Researcher</ns0:data>
+</ns0:node>
+<ns0:node id="('Researcher', '0000-0002-5002-3898')">
+  <ns0:data key="labels">Researcher</ns0:data>
+</ns0:node>
+<ns0:node id="('Researcher', '0000-0002-5799-3539')">
+  <ns0:data key="labels">Researcher</ns0:data>
+</ns0:node>
+<ns0:node id="('Researcher', '0000-0002-3580-7336')">
+  <ns0:data key="labels">Researcher</ns0:data>
+</ns0:node>
+<ns0:node id="('Researcher', '0000-0002-9744-4155')">
+  <ns0:data key="labels">Researcher</ns0:data>
+</ns0:node>
+<ns0:node id="('Researcher', '0000-0001-7418-8673')">
+  <ns0:data key="labels">Researcher</ns0:data>
+</ns0:node>
+<ns0:node id="('Researcher', '0009-0006-1693-1223')">
+  <ns0:data key="labels">Researcher</ns0:data>
+</ns0:node>
+<ns0:node id="('Researcher', '0000-0003-0574-436X')">
+  <ns0:data key="labels">Researcher</ns0:data>
+</ns0:node>
+<ns0:node id="('Researcher', '0000-0002-4384-6837')">
+  <ns0:data key="labels">Researcher</ns0:data>
+</ns0:node>
+<ns0:node id="('Researcher', '0000-0002-9657-1996')">
+  <ns0:data key="labels">Researcher</ns0:data>
+</ns0:node>
+<ns0:node id="('Researcher', '0000-0002-3193-3108')">
+  <ns0:data key="labels">Researcher</ns0:data>
+</ns0:node>
+<ns0:node id="('Researcher', '0000-0002-1826-7884')">
+  <ns0:data key="labels">Researcher</ns0:data>
+</ns0:node>
+<ns0:node id="('Researcher', '0000-0002-3142-3255')">
+  <ns0:data key="labels">Researcher</ns0:data>
+</ns0:node>
+<ns0:node id="('Researcher', '0000-0001-7047-6811')">
+  <ns0:data key="labels">Researcher</ns0:data>
+</ns0:node>
+<ns0:node id="('Researcher', '0000-0003-3179-0212')">
+  <ns0:data key="labels">Researcher</ns0:data>
+</ns0:node>
+<ns0:node id="('Researcher', '0000-0001-7713-8786')">
+  <ns0:data key="labels">Researcher</ns0:data>
+</ns0:node>
+<ns0:node id="('Researcher', '0000-0001-5245-0917')">
+  <ns0:data key="labels">Researcher</ns0:data>
+</ns0:node>
+<ns0:node id="('Researcher', '0000-0001-5623-1842')">
+  <ns0:data key="labels">Researcher</ns0:data>
+</ns0:node>
+<ns0:node id="('Researcher', '0000-0002-0131-1535')">
+  <ns0:data key="labels">Researcher</ns0:data>
+</ns0:node>
+<ns0:node id="('Researcher', '0000-0001-9611-5467')">
+  <ns0:data key="labels">Researcher</ns0:data>
+</ns0:node>
+<ns0:node id="('Researcher', '0000-0002-6410-1252')">
+  <ns0:data key="labels">Researcher</ns0:data>
+</ns0:node>
+<ns0:node id="('Researcher', '0000-0002-1799-6444')">
+  <ns0:data key="labels">Researcher</ns0:data>
+</ns0:node>
+<ns0:node id="('Researcher', '0000-0001-9326-2023')">
+  <ns0:data key="labels">Researcher</ns0:data>
+</ns0:node>
+<ns0:node id="('Researcher', '0000-0002-9892-9672')">
+  <ns0:data key="labels">Researcher</ns0:data>
+</ns0:node>
+<ns0:node id="('Researcher', '0000-0002-2233-1711')">
+  <ns0:data key="labels">Researcher</ns0:data>
+</ns0:node>
+<ns0:node id="('Researcher', '0000-0002-3391-8649')">
+  <ns0:data key="labels">Researcher</ns0:data>
+</ns0:node>
+<ns0:node id="('Researcher', '0000-0002-3868-8432')">
+  <ns0:data key="labels">Researcher</ns0:data>
+</ns0:node>
+<ns0:node id="('Researcher', '0000-0001-6840-6283')">
+  <ns0:data key="labels">Researcher</ns0:data>
+</ns0:node>
+<ns0:node id="('Researcher', '0000-0002-8549-2432')">
+  <ns0:data key="labels">Researcher</ns0:data>
+</ns0:node>
+<ns0:node id="('Researcher', '0000-0001-8119-5783')">
+  <ns0:data key="labels">Researcher</ns0:data>
+</ns0:node>
+<ns0:node id="('Researcher', '0000-0002-5266-0591')">
+  <ns0:data key="labels">Researcher</ns0:data>
+</ns0:node>
+<ns0:node id="('Researcher', '0000-0001-7883-6869')">
+  <ns0:data key="labels">Researcher</ns0:data>
+</ns0:node>
+<ns0:node id="('Researcher', '0000-0002-4929-6821')">
+  <ns0:data key="labels">Researcher</ns0:data>
+</ns0:node>
+<ns0:node id="('Researcher', '0000-0003-3080-3675')">
+  <ns0:data key="labels">Researcher</ns0:data>
+</ns0:node>
+<ns0:node id="('Researcher', '0000-0002-8405-772X')">
+  <ns0:data key="labels">Researcher</ns0:data>
+</ns0:node>
+</ns0:graph></ns0:graphml>

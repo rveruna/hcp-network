@@ -1,3 +1,8 @@
 {
-  "rewrites": [{ "source": "/api/orcid", "destination": "/api/orcid.js" }]
+  "rewrites": [
+    {
+      "source": "/orcid-proxy/:match*",
+      "destination": "https://pub.orcid.org/v3.0/:match*"
+    }
+  ]
 }

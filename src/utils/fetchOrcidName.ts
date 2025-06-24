@@ -51,17 +51,21 @@ const queue = new RequestQueue(3);
 
 export async function fetchOrcidName(input: string): Promise<string> {
   const orcidId = extractOrcidId(input);
+  console.log('Fetching ORCID for:', orcidId);
+  console.log('Calling:', `/api/orcid-proxy/${orcidId}/personal-details`);
+
   if (!orcidId) return 'Unknown';
 
   if (nameCache.has(orcidId)) {
     return nameCache.get(orcidId)!;
   }
 
-  const ORCID_TOKEN = '16b908ac-9df5-48d4-8706-1ecf1dd09392';
-
   return queue.add(async () => {
     try {
-      const res = await fetch(`/orcid-proxy/${orcidId}/personal-details`, {
+      const ORCID_TOKEN = import.meta.env.VITE_ORCID_TOKEN;
+      const baseUrl = '/api/orcid-proxy';
+      console.log('[ORCID fetch]', orcidId, `/api/orcid-proxy/${orcidId}/personal-details`);
+      const res = await fetch(`${baseUrl}/${orcidId}/personal-details`, {
         headers: {
           Accept: 'application/json',
           Authorization: `Bearer ${ORCID_TOKEN}`
@@ -69,6 +73,7 @@ export async function fetchOrcidName(input: string): Promise<string> {
       });
 
       if (!res.ok) {
+        console.warn('[ORCID] Fetch failed for', orcidId, ':', res.status);
         nameCache.set(orcidId, 'Unknown');
         return 'Unknown';
       }
@@ -84,6 +89,7 @@ export async function fetchOrcidName(input: string): Promise<string> {
         return 'Unknown';
       }
     } catch (e) {
+      console.error('[ORCID] Error fetching', input, e);
       nameCache.set(orcidId, 'Unknown');
       return 'Unknown';
     }

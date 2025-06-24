@@ -10,8 +10,11 @@ export function useOrcidProfile() {
     if (!orcidId) return;
 
     try {
-      const ORCID_TOKEN = '16b908ac-9df5-48d4-8706-1ecf1dd09392';
-      const res = await fetch(`/orcid-proxy/${orcidId}/record`, {
+      const ORCID_TOKEN = import.meta.env.VITE_ORCID_TOKEN;
+
+      const baseUrl = '/api/orcid-proxy';
+
+      const res = await fetch(`${baseUrl}/${orcidId}/record`, {
         headers: {
           Accept: 'application/json',
           Authorization: `Bearer ${ORCID_TOKEN}`
